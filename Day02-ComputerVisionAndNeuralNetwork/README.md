@@ -27,3 +27,5 @@ Se si vuole eseguire questo codice in autonomia, è necessario installare le seg
 Comando da utilizzare su **Google Colab** prima dell'esecuzione di ogni notebook:
 
 `!pip install numpy opencv-python matplotlib requests Pillow`
+
+Per l'installazione di Pytorch e torchvision (già installate su Colab), fare riferimento a [questo link](https://pytorch.org/get-started/locally/)
