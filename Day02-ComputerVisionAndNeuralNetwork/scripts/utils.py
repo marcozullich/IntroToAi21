@@ -49,7 +49,7 @@ def use_gpu_if_possible():
 
 def random_data_extractor(loader, n):
     data, label = next(iter(loader))
-    random_ind = torch.randint(len(data), n)
+    random_ind = torch.randint(len(data), [n])
     return data[random_ind], label[random_ind]
 
 def show_bw_image(image, title=""):
