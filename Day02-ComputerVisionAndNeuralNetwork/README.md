@@ -2,7 +2,7 @@
 
 ## Slide
 
-Verranno caricate in questa cartella a seguito della lezione del 31/08.
+Vedi file `slide_con_annotazioni.pdf`
 
 ## Esempi interattivi
 
