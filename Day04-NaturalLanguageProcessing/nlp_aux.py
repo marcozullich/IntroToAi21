@@ -73,7 +73,7 @@ import re
 def processSentence2(sentence, lemmatizer):
     ww = sentence.split()
     #ww = nltk.word_tokenize(sentence)
-    ww = [x for x in ww if x not in stopwords]
+    ww = [x for x in ww if x not in stopwords.words("english")]
     ww = [x for x in ww if x !=""]
     ww = [lemmatizer.lemmatize(x) for x in ww]
     if len(ww)>2:
