@@ -69,7 +69,14 @@ def detect_language(text):
 
 from nltk.stem import WordNetLemmatizer
 import numpy as np
+import pandas as pd
+import re
 lemmatizer = WordNetLemmatizer()
+
+df = pd.read_csv('simpsons_dataset.csv')
+df.columns = ["name", "spoken_words"]
+df.spoken_words = [re.sub("[^A-Za-z']+", ' ', str(row)).lower() for row in df['spoken_words']]
+df.spoken_words= [re.sub("[/']", '', str(row)).lower() for row in df.spoken_words]
 
 def processSentence2(sentence):
     ww = sentence.split()
