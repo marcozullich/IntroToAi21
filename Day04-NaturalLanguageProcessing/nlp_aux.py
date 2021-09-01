@@ -6,18 +6,19 @@ from nltk.corpus import stopwords
 from nltk import wordpunct_tokenize
 from nltk.data import find
 
-import multiprocessing
-from gensim.models import Word2Vec
-from nltk.corpus import brown, movie_reviews, treebank
-mr = Word2Vec(movie_reviews.sents())
-t = Word2Vec(treebank.sents())
-
 nltk.download('wordnet')
 nltk.download('omw')
 nltk.download('stopwords')
 nltk.download('movie_reviews')
 nltk.download('punkt')
 nltk.download('treebank')
+
+import multiprocessing
+from gensim.models import Word2Vec
+from nltk.corpus import brown, movie_reviews, treebank
+mr = Word2Vec(movie_reviews.sents())
+t = Word2Vec(treebank.sents())
+
 
 
 def wiki_bag_of_words(page, n=5, remove_stop_words=False, print_bow=False):
